@@ -81,42 +81,42 @@ p {
 .btn:active {
   color: #6d747b;
 }
-.btn.btn-primary {
+.btn.color-primary {
   background-color: #0894ec;
   border-color: transparent;
   color: #fff;
 }
-.btn.btn-primary:active {
+.btn.color-primary:active {
   background-color: #0a8ddf;
   border-color: transparent;
   color: #fff;
 }
-.btn.btn-danger {
+.btn.color-danger {
   background-color: #f6383a;
   border-color: transparent;
   color: #fff;
 }
-.btn.btn-danger:active {
+.btn.color-danger:active {
   background-color: #f00b0d;
   border-color: transparent;
   color: #fff;
 }
-.btn.btn-warning {
+.btn.color-warning {
   background-color: #f60;
   border-color: transparent;
   color: #fff;
 }
-.btn.btn-warning:active {
+.btn.color-warning:active {
   background-color: #cc5200;
   border-color: transparent;
   color: #fff;
 }
-.btn.btn-success {
+.btn.color-success {
   background-color: #4cd964;
   border-color: transparent;
   color: #fff;
 }
-.btn.btn-success:active {
+.btn.color-success:active {
   background-color: #2ac845;
   border-color: transparent;
   color: #fff;
@@ -132,42 +132,42 @@ p {
 .btn.btn-outline:active {
   background-color: #fff;
 }
-.btn.btn-outline.btn-primary {
+.btn.btn-outline.color-primary {
   background-color: transparent;
   border-color: #0894ec;
   color: #0894ec;
 }
-.btn.btn-outline.btn-primary:active {
+.btn.btn-outline.color-primary:active {
   background-color: #0a8ddf;
   border-color: transparent;
   color: #fff;
 }
-.btn.btn-outline.btn-danger {
+.btn.btn-outline.color-danger {
   background-color: transparent;
   border-color: #f6383a;
   color: #f6383a;
 }
-.btn.btn-outline.btn-danger:active {
+.btn.btn-outline.color-danger:active {
   background-color: #f00b0d;
   border-color: transparent;
   color: #fff;
 }
-.btn.btn-outline.btn-warning {
+.btn.btn-outline.color-warning {
   background-color: transparent;
   border-color: #f60;
   color: #f60;
 }
-.btn.btn-outline.btn-warning:active {
+.btn.btn-outline.color-warning:active {
   background-color: #cc5200;
   border-color: transparent;
   color: #fff;
 }
-.btn.btn-outline.btn-success {
+.btn.btn-outline.color-success {
   background-color: transparent;
   border-color: #4cd964;
   color: #4cd964;
 }
-.btn.btn-outline.btn-success:active {
+.btn.btn-outline.color-success:active {
   background-color: #2ac845;
   border-color: transparent;
   color: #fff;
@@ -176,42 +176,42 @@ p {
   background-color: transparent;
   border-color: transparent;
 }
-.btn.btn-clear.btn-primary {
+.btn.btn-clear.color-primary {
   background-color: transparent;
   border-color: transparent;
   color: #0894ec;
 }
-.btn.btn-clear.btn-primary:active {
+.btn.btn-clear.color-primary:active {
   background-color: transparent;
   border-color: transparent;
   color: #60befa;
 }
-.btn.btn-clear.btn-danger {
+.btn.btn-clear.color-danger {
   background-color: transparent;
   border-color: transparent;
   color: #f6383a;
 }
-.btn.btn-clear.btn-danger:active {
+.btn.btn-clear.color-danger:active {
   background-color: transparent;
   border-color: transparent;
   color: #fa9a9b;
 }
-.btn.btn-clear.btn-warning {
+.btn.btn-clear.color-warning {
   background-color: transparent;
   border-color: transparent;
   color: #f60;
 }
-.btn.btn-clear.btn-warning:active {
+.btn.btn-clear.color-warning:active {
   background-color: transparent;
   border-color: transparent;
   color: #ffa366;
 }
-.btn.btn-clear.btn-success {
+.btn.btn-clear.color-success {
   background-color: transparent;
   border-color: transparent;
   color: #4cd964;
 }
-.btn.btn-clear.btn-success:active {
+.btn.btn-clear.color-success:active {
   background-color: transparent;
   border-color: transparent;
   color: #a0ebad;
