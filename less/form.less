@@ -1,0 +1,108 @@
+@import './variables';
+
+@font-size-radio: 0.5rem;
+
+.radio, .checkbox {
+  position: relative;
+  display: block;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  .ellipsis();
+
+  &.inline {
+    margin-right: 0.2rem;
+  }
+
+  input {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    &:before {
+      .icon;
+      font-size: @font-size-radio;
+      position: relative;
+    }
+  }
+
+  //重构radio UI
+  input[type='radio'] {
+    &:before {
+      content: "\e611";
+    }
+    &:checked {
+      &:before {
+        content: "\e612";
+      }
+    }
+  }
+
+  //重构checkbox UI
+  input[type='checkbox'] {
+    &:before {
+      content: "\e602";
+    }
+    &:checked {
+      &:before {
+        content: "\e603";
+      }
+    }
+  }
+}
+
+.switch {
+  @block-width: 0.5rem;
+  @switch-border-width: 0.05rem;
+  .switchColorMixin(@name,@color) {
+    &.@{name}:checked {
+      background-color: @color;
+      border-color: @color;
+    }
+  }
+
+  position: relative;
+  display: block;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  input[type='checkbox'] {
+    width: (@block-width+@switch-border-width)*2;
+    height: @block-width+@switch-border-width*2;
+    background-color: @color-chrome;
+    border-radius: 1rem;
+    border: @switch-border-width solid @color-chrome;
+    transition: background-color 300ms, border-color 300ms;
+    -webkit-transition: background-color 300ms, border-color 300ms;
+
+    &:after {
+      content: '';
+      display: block;
+      height: @block-width;
+      width: @block-width;
+      border-radius: 100%;
+      background: #fff;
+      z-index: 2;
+      transition: transform 300ms;
+      -webkit-transition: transform 300ms;
+      box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
+      position: absolute;
+      left: @switch-border-width;
+      top: @switch-border-width;
+    }
+
+    &:checked {
+      background-color: @color-text;
+      border-color: @color-text;
+      &:after {
+        transform: translateX(@block-width);
+      }
+    }
+
+    .switchColorMixin(color-primary, @color-primary);
+    .switchColorMixin(color-danger, @color-danger);
+    .switchColorMixin(color-success, @color-success);
+    .switchColorMixin(color-warning, @color-warning);
+
+  }
+}

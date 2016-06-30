@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--为方便计算，html的fontSize设置为50px，即实际显示的尺寸为设计图的50%，动态改变html的fontSize为100px即可实现100%设计图显示-->
+<html style="font-size: 50px;">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/dist/ui.css"/>
+
+    <script>
+        //动态适配分辨率
+        var docEl = document.documentElement;
+        var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        var recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = Math.floor(50 * (clientWidth / 375)) + 'px';
+        };
+        window.addEventListener(resizeEvt, recalc, false);
+        recalc();
+    </script>
+    <style>
+        span.icon {
+            width: 1rem;
+            height: 1rem;
+            margin: 0.15rem;
+            font-size: 0.6rem;
+            line-height: 1rem;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 100%;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+<div style="text-align: center">
+    <span class="icon icon-danxuanfill"></span>
+    <span class="icon icon-danxuan"></span>
+    <span class="icon icon-fangxingweixuanzhong"></span>
+    <span class="icon icon-fangxingxuanzhongfill"></span>
+    <span class="icon icon-fangxingxuanzhong"></span>
+    <span class="icon icon-guanbi1"></span>
+    <span class="icon icon-guanbi2fill"></span>
+    <span class="icon icon-guanbi2"></span>
+    <span class="icon icon-jiahao"></span>
+    <span class="icon icon-jiahao1"></span>
+    <span class="icon icon-jiahao2fill"></span>
+    <span class="icon icon-jianhao"></span>
+    <span class="icon icon-tishifill"></span>
+    <span class="icon icon-tishi"></span>
+    <span class="icon icon-wenhaofill"></span>
+    <span class="icon icon-wenhao"></span>
+    <span class="icon icon-xuanze"></span>
+    <span class="icon icon-yuanxingweixuanzhong"></span>
+    <span class="icon icon-yuanxingxuanzhongfill"></span>
+    <span class="icon icon-yuanxingxuanzhong"></span>
+    <span class="icon icon-biaoxingfill"></span>
+    <span class="icon icon-biaoxing"></span>
+    <span class="icon icon-chexiao"></span>
+    <span class="icon icon-dianpufill"></span>
+    <span class="icon icon-dianpu"></span>
+    <span class="icon icon-dingdan"></span>
+    <span class="icon icon-fankui"></span>
+    <span class="icon icon-fenxiang"></span>
+    <span class="icon icon-gengduo"></span>
+    <span class="icon icon-gonglve"></span>
+    <span class="icon icon-gouwuchefill"></span>
+    <span class="icon icon-gouwuche"></span>
+    <span class="icon icon-gouwudai"></span>
+    <span class="icon icon-qiapianxingshi"></span>
+    <span class="icon icon-kefufill"></span>
+    <span class="icon icon-kefu"></span>
+    <span class="icon icon-liebiaoxingshi"></span>
+    <span class="icon icon-liuyanfill"></span>
+    <span class="icon icon-liuyan"></span>
+    <span class="icon icon-pengyoufill"></span>
+    <span class="icon icon-pengyou"></span>
+    <span class="icon icon-qingchu"></span>
+    <span class="icon icon-quan"></span>
+    <span class="icon icon-saoma"></span>
+    <span class="icon icon-shaixuan"></span>
+    <span class="icon icon-shanchu"></span>
+    <span class="icon icon-shezhi"></span>
+    <span class="icon icon-shenfen"></span>
+    <span class="icon icon-shizhongfill"></span>
+    <span class="icon icon-shizhong"></span>
+    <span class="icon icon-shouyefill"></span>
+    <span class="icon icon-shouye"></span>
+    <span class="icon icon-sousuo"></span>
+    <span class="icon icon-sousuoleimu"></span>
+    <span class="icon icon-taobao"></span>
+    <span class="icon icon-taojinbi"></span>
+    <span class="icon icon-tianmao"></span>
+    <span class="icon icon-tongzhifill"></span>
+    <span class="icon icon-tongzhi"></span>
+    <span class="icon icon-tuikuan"></span>
+    <span class="icon icon-wangwangfill"></span>
+    <span class="icon icon-wangwang"></span>
+    <span class="icon icon-wodefill"></span>
+    <span class="icon icon-wode"></span>
+    <span class="icon icon-wuliu"></span>
+    <span class="icon icon-xihuanfill"></span>
+    <span class="icon icon-xihuan"></span>
+    <span class="icon icon-xinxifill"></span>
+    <span class="icon icon-xinxi"></span>
+    <span class="icon icon-youhuiquan"></span>
+    <span class="icon icon-yuyan"></span>
+    <span class="icon icon-zhengli"></span>
+    <span class="icon icon-zuji"></span>
+    <span class="icon icon-zuobiaofill"></span>
+    <span class="icon icon-zuobiao"></span>
+    <span class="icon icon-dibu"></span>
+    <span class="icon icon-dingbujinzhi"></span>
+    <span class="icon icon-dingbu"></span>
+    <span class="icon icon-xiangshang1"></span>
+    <span class="icon icon-xiangshang2"></span>
+    <span class="icon icon-xiangshang3"></span>
+    <span class="icon icon-xiangshang5"></span>
+    <span class="icon icon-xiangxia1"></span>
+    <span class="icon icon-xiangxia2"></span>
+    <span class="icon icon-xiangxia3"></span>
+    <span class="icon icon-xiangxia5"></span>
+    <span class="icon icon-xiangyou1"></span>
+    <span class="icon icon-xiangyou2"></span>
+    <span class="icon icon-xiangyou3fill"></span>
+    <span class="icon icon-xiangyou3"></span>
+    <span class="icon icon-xiangzuo1"></span>
+    <span class="icon icon-xiangzuo2"></span>
+    <span class="icon icon-xiangji1fill"></span>
+    <span class="icon icon-xiangji1"></span>
+    <span class="icon icon-xiangji2"></span>
+    <span class="icon icon-jiazai"></span>
+    <span class="icon icon-shuaxin"></span>
+    <span class="icon icon-wifi"></span>
+    <span class="icon icon-hongbao"></span>
+    <span class="icon icon-xinyongqia"></span>
+    <span class="icon icon-shoujitaobao"></span>
+    <span class="icon icon-yonghufill"></span>
+    <span class="icon icon-yonghu"></span>
+    <span class="icon icon-juhuasuan"></span>
+    <span class="icon icon-salefill"></span>
+    <span class="icon icon-sale"></span>
+    <span class="icon icon-zengsong"></span>
+    <span class="icon icon-androidgengduo"></span>
+    <span class="icon icon-leimu"></span>
+    <span class="icon icon-bangzhuzhongxin"></span>
+    <span class="icon icon-caidan"></span>
+    <span class="icon icon-zantongfill"></span>
+    <span class="icon icon-zantong"></span>
+    <span class="icon icon-xiangshang4"></span>
+    <span class="icon icon-xiangxia4"></span>
+    <span class="icon icon-dianhua"></span>
+    <span class="icon icon-danpin"></span>
+    <span class="icon icon-duozhongzhifu"></span>
+    <span class="icon icon-erweima"></span>
+    <span class="icon icon-guojiwuliu"></span>
+    <span class="icon icon-huwai"></span>
+    <span class="icon icon-jujia"></span>
+    <span class="icon icon-kuzi"></span>
+    <span class="icon icon-muying"></span>
+    <span class="icon icon-nanzhuang"></span>
+    <span class="icon icon-neiyi"></span>
+    <span class="icon icon-nvzhuang"></span>
+    <span class="icon icon-pinpai"></span>
+    <span class="icon icon-tequanzhuanshu"></span>
+    <span class="icon icon-xiangbao"></span>
+    <span class="icon icon-yishouchu"></span>
+    <span class="icon icon-others"></span>
+</div>
+</body>
+
+</html>

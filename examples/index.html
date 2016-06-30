@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--为方便计算，html的fontSize设置为50px，即实际显示的尺寸为设计图的50%，动态改变html的fontSize为100px即可实现100%设计图显示-->
+<html style="font-size: 50px;">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/dist/ui.css"/>
+
+    <script>
+        //动态适配分辨率
+        var docEl = document.documentElement;
+        var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        var recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = Math.floor(50 * (clientWidth / 375)) + 'px';
+        };
+        window.addEventListener(resizeEvt, recalc, false);
+        recalc();
+    </script>
+
+</head>
+
+<body>
+<p>
+    <a href="buttons.html">Buttons</a>
+</p>
+<p>
+    <a href="icons.html">Icons</a></p>
+<p>
+    <a href="bars/index.html">Bars</a>
+</p>
+<p>
+    <a href="lists.html">Lists</a>
+</p>
+<p>
+    <a href="form.html">Form</a>
+</p>
+<p>
+    <a href="card.html">Card</a>
+</p>
+</body>
+
+</html>

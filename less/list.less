@@ -1,0 +1,118 @@
+@import './variables';
+@import './mixin';
+
+@padding: 0.3rem;
+@color-divider: #f5f5f5;
+@color-item-bg: #fff;
+@font-size-icon: 0.5rem;
+@image-width: 1.2rem;
+@image-height: 1.2rem;
+
+.iconMixin() {
+  position: absolute;
+  top: 0;
+  font-size: @font-size-icon;
+  height: 100%;
+  .flexbox();
+  .align-items(center);
+}
+
+.list {
+  //常规 必须
+  .item {
+    position: relative;
+    padding: @padding;
+    border-bottom: @border-default;
+    background-color: @color-item-bg;
+
+    p, div, h1, h2, h3, h4, h5, h6, h7, h8, h9, span {
+      margin-top: 0;
+      font-size: @font-size-default;
+      .ellipsis();
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  //列表分割
+  .item-divider {
+    padding: @padding/2 @padding;
+    background-color: @color-divider;
+    font-weight: @font-weight;
+  }
+
+  //左侧含有图标
+  .item-icon-left {
+    padding-left: 0.9rem;
+    .icon:first-child {
+      left: 0.2rem;
+      .iconMixin()
+    }
+  }
+
+  //右侧含有图标
+  .item-icon-right {
+    padding-right: 0.9rem;
+    .icon:last-child {
+      right: 0.2rem;
+      .iconMixin()
+    }
+  }
+
+  //左侧含有缩略图
+  .item-thumbnail-left {
+    min-height: @padding*2+@image-height;
+    padding-left: @padding*2+@image-height;
+    .thumbnail:first-child {
+      position: absolute;
+      left: @padding;
+      top: @padding;
+      max-width: @image-width;
+      max-height: @image-height;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  //右侧含有缩略图
+  .item-thumbnail-right {
+    min-height: @padding*2+@image-height;
+    padding-right: @padding*2+@image-height;
+    .thumbnail:last-child {
+      position: absolute;
+      right: @padding;
+      top: @padding;
+      max-width: @image-width;
+      max-height: @image-height;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  //可选择列表-多选
+  .item-checkbox {
+    .checkbox {
+      .flexbox();
+      .align-items(center);
+    }
+    .item-content {
+      padding-left: 0.2rem;
+      display: block;
+    }
+  }
+
+  //可选择列表-单选
+  .item-radio {
+    .radio {
+      .flexbox();
+      .align-items(center);
+    }
+    .item-content {
+      padding-left: 0.2rem;
+      display: block;
+    }
+  }
+
+}

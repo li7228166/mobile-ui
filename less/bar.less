@@ -1,0 +1,50 @@
+@import './variables';
+
+.bar {
+  height: @bar-base-height;
+  width: 100%;
+  border-bottom: @border-default;
+  background-color: @color-chrome;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: fixed;
+
+  .title {
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 0;
+    font-size: @bar-font-size;
+    font-weight: @font-weight;
+    line-height: @bar-base-height;
+    color: @color-text;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .btn {
+    padding: 0.1rem 0.2rem;
+    z-index: 20;
+    top: 0.1rem;
+    font-size: @bar-font-size;
+
+    .icon{
+      vertical-align: top;
+    }
+
+    &.pull-left {
+      margin-left: 0.1rem;
+    }
+    &.pull-right {
+      margin-right: 0.1rem;
+    }
+  }
+
+  &.bar-header {
+    top: 0;
+  }
+
+}

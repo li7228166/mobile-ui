@@ -1,0 +1,23 @@
+@import './variables';
+
+.card {
+
+  @padding: 0.2rem;
+
+  margin: 0.2rem;
+  background: #fff;
+  box-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 0.05rem;
+  overflow: hidden;
+
+  .card-content {
+    padding: @padding;
+  }
+  .card-divider {
+    .ellipsis();
+    background-color: @color-bg;
+    padding: @padding;
+    border-bottom: @border-default;
+  }
+}
