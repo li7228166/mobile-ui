@@ -6,7 +6,8 @@ var gulp = require('gulp'),
 	notify = require('gulp-notify'),
     plumber = require('gulp-plumber'),
 	browserSync = require('browser-sync').create(),
-	reload = browserSync.reload;
+	reload = browserSync.reload,
+	autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('watch', function() {
 	browserSync.init({
@@ -23,6 +24,7 @@ gulp.task('less', function() {
 	return gulp.src('./less/ui.less')
 		.pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
 		.pipe(less())
+		.pipe(autoprefixer())
 		.pipe(gulp.dest('./dist/'))
 		.pipe(browserSync.reload({
 			stream: true

@@ -1,8 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   outline: 0;
@@ -77,6 +75,8 @@ p {
   min-width: 1rem;
   padding: 0.2rem;
   line-height: 1.6;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 .btn:active {
   color: #6d747b;
@@ -312,11 +312,9 @@ p {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
 }
 .list .item-icon-right {
@@ -330,11 +328,9 @@ p {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
 }
 .list .item-thumbnail-left {
@@ -366,11 +362,9 @@ p {
 .list .item-checkbox .checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
 }
 .list .item-checkbox .item-content {
@@ -380,11 +374,9 @@ p {
 .list .item-radio .radio {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
 }
 .list .item-radio .item-content {
@@ -464,7 +456,10 @@ p {
   border-radius: 100%;
   background: #fff;
   z-index: 2;
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
   transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
   -webkit-transition: transform 300ms;
   box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -476,7 +471,8 @@ p {
   border-color: #3d4145;
 }
 .switch input[type='checkbox']:checked:after {
-  transform: translateX(0.5rem);
+  -webkit-transform: translateX(0.5rem);
+          transform: translateX(0.5rem);
 }
 .switch input[type='checkbox'].color-primary:checked {
   background-color: #0894ec;
