@@ -2,8 +2,8 @@
 
 .bar {
   height: @bar-base-height;
+  line-height: @bar-base-height;
   width: 100%;
-  border-bottom: @border-default;
   background-color: @color-chrome;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
@@ -17,7 +17,7 @@
     padding: 0;
     font-size: @bar-font-size;
     font-weight: @font-weight;
-    line-height: @bar-base-height;
+    //line-height: @bar-base-height;
     color: @color-text;
     text-align: center;
     white-space: nowrap;
@@ -31,7 +31,7 @@
     top: 0.1rem;
     font-size: @bar-font-size;
 
-    .icon{
+    .icon {
       vertical-align: top;
     }
 
@@ -41,10 +41,21 @@
     &.pull-right {
       margin-right: 0.1rem;
     }
+    &.btn-clear {
+      top: 0;
+      font-size: 0.5rem;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   &.bar-header {
     top: 0;
+    border-bottom: @border-default;
+  }
+  &.bar-footer{
+    bottom: 0;
+    border-top: @border-default;
   }
 
 }

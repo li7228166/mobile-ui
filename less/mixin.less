@@ -5,6 +5,15 @@
   display: flex;
 }
 
+.flex (@grow: 1, @shrink: 1, @basis: .01%) {
+  -webkit-box-flex: @grow; // Webkit Old
+  -moz-box-flex: @grow; // Mozilla Old
+  -webkit-flex: @arguments; // Webkit Standard
+  -moz-flex: @arguments; // Mozilla Standard
+  -ms-flex: @arguments; // IE 10 Mid, IE 11 Standard
+  flex: @arguments; // Standard
+}
+
 .flex-wrap(@fw) when (@fw = nowrap) {
   -webkit-box-lines: single;
   -moz-box-lines: single;
@@ -26,6 +35,54 @@
   -webkit-flex-wrap: @fw;
   -ms-flex-wrap: @fw;
   flex-wrap: @fw;
+}
+
+// Direction
+// ---------
+//
+// Property Name: flex-direction
+// Values: row | row-reverse | column | column-reverse
+.flex-direction(@value: row) when (@value = row) {
+  .box-orient(horizontal);
+  .box-direction(normal);
+  min-width: 0;
+}
+
+.flex-direction(@value: row) when (@value = row-reverse) {
+  .box-orient(horizontal);
+  .box-direction(reverse);
+  min-width: 0;
+}
+
+.flex-direction(@value: row) when (@value = column) {
+  .box-orient(vertical);
+  .box-direction(normal);
+  min-height: 0;
+}
+
+.flex-direction(@value: row) when (@value = column-reverse) {
+  .box-orient(vertical);
+  .box-direction(reverse);
+  min-height: 0;
+}
+
+.flex-direction(@value: row) {
+  -webkit-flex-direction: @value; // Webkit Standard
+  -moz-flex-direction: @value; // Mozilla Standard
+  -ms-flex-direction: @value; // IE 10 Mid, IE 11 Standard
+  flex-direction: @value; // Standard
+}
+
+// Old Properties
+// --------------
+.box-direction(@value) {
+  -webkit-box-direction: @value; // Webkit Old
+  -moz-box-direction: @value; // Mozilla Old
+}
+
+.box-orient(@value) {
+  -webkit-box-orient: @value; // Webkit Old
+  -moz-box-orient: @value; // Mozilla Old
 }
 
 .flex-shrink(@fs) {
@@ -100,3 +157,21 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+.clearFloat() {
+  &:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
+
+
+
+
+
+
+
+
+
+
