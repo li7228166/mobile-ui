@@ -18,10 +18,17 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
+
+    width: @font-size-radio;
+    height: @font-size-radio;
+    overflow: visible;
+    border: 0;
+    background: 0 0;
+
     &:before {
       .icon;
       font-size: @font-size-radio;
-      position: relative;
+      line-height: 1;
     }
   }
 
