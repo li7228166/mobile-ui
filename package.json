@@ -1,12 +1,12 @@
 {
-  "name": "ui",
+  "name": "lxp-mobile-ui",
   "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
+  "description": "Not enough for the purpose of the UI library, are playing rogue",
+  "main": "dist/ui.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "lxp",
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.13.0",

@@ -4,12 +4,12 @@ var gulp = require('gulp'),
 	less = require('gulp-less'),
 	runSequence = require('run-sequence'),
 	notify = require('gulp-notify'),
-    plumber = require('gulp-plumber'),
+	plumber = require('gulp-plumber'),
 	browserSync = require('browser-sync').create(),
 	reload = browserSync.reload,
 	autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
 	browserSync.init({
 		server: {
 			baseDir: "./"
@@ -20,7 +20,7 @@ gulp.task('watch', function() {
 	gulp.watch("examples/**/*.html").on('change', reload);
 });
 
-gulp.task('less', function() {
+gulp.task('less', function () {
 	return gulp.src('./less/ui.less')
 		.pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
 		.pipe(less())
@@ -30,8 +30,15 @@ gulp.task('less', function() {
 			stream: true
 		}));
 });
+gulp.task('build', function () {
+	return gulp.src('./less/ui.less')
+		.pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
+		.pipe(less())
+		.pipe(autoprefixer())
+		.pipe(gulp.dest('./dist/'));
+});
 
-gulp.task('default', function() {
+gulp.task('default', function () {
 	runSequence(
 		'less',
 		'watch'
